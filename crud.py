@@ -1,11 +1,11 @@
 usuario = []
 
-def new_usuario():
+def creat_usuario():
     nome = input("Digite o nome do usuário: ")
     usuario.append(nome)
     print("Usuário cadastrado com sucesso!")
 
-def excluir_usuario():
+def delete_usuario():
     nome = input("Digite o nome do usuário a ser excluído: ")
 
     if nome in usuario:
@@ -25,7 +25,7 @@ def update_usuario():
     else:
         print("Usuário não encontrado.")
 
-def listar_usuario():
+def list_usuario():
     print("\nUsuários cadastrados:")
 
     if len(usuario) == 0:
@@ -47,16 +47,16 @@ while True:
     switch = input("Digite o número da opção desejada: ")
 
     if switch == "1":
-        new_usuario()
+        creat_usuario()
 
     elif switch == "2":
-        excluir_usuario()
+        delete_usuario()
 
     elif switch == "3":
         update_usuario()
 
     elif switch == "4":
-        listar_usuario()
+        list_usuario()
 
     elif switch == "5":
         print("Saindo do sistema...")
